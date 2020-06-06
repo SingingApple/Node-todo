@@ -7,8 +7,8 @@ const todoController = require("./controllers/todoController");
 
 // template engine
 app.set("view engine", "ejs");
-//static files
-app.use(express.static("./public"));
+
+app.use(express.static(`./public`));
 
 //fireControllers
 todoController(app);

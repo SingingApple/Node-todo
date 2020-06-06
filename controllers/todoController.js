@@ -1,5 +1,8 @@
 module.exports = (app) => {
-  app.get("/todo", (req, res) => {});
+  const data = [{ item: "Buy milk" }, { item: "Play mario" }];
+  app.get("/todo", (req, res) => {
+    res.render("todo", { data });
+  });
 
   app.post("/todo", (req, res) => {});
 
